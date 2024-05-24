@@ -1,0 +1,33 @@
+.header__hero {
+    padding-top: 66px;
+    padding-bottom: 90px;
+
+    display: flex;
+    justify-content: space-between;
+}
+
+.header__hero-image {
+    img {
+        border-radius: 12px;
+    }
+    
+}
+.hero__heading {
+    text-transform: uppercase;
+
+    font-weight: 500;
+    font-size: 70px;
+    line-height: 80%;
+
+    margin-bottom: 24px;
+
+    span {
+        font-size: 100px;
+    }
+}
+
+.header__hero-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}

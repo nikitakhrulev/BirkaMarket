@@ -1,0 +1,37 @@
+.menu {
+    padding: 60px 0;
+}
+.menu__header {
+    display: flex; 
+    align-items: center;
+    justify-content: space-between;
+
+    margin-bottom: 25px;
+}
+.swiper {
+    position: relative;
+
+}
+.swiper-slide {
+
+    img {
+        margin-bottom: 12px;
+    }
+    
+}
+.swiper__buttons img {
+    background-color: #efefef;
+
+    padding: 12px;
+
+    border-radius: 1000px;
+
+    &:hover {
+        opacity: 0.5;
+        transition: 0.1s ease-in;
+    }
+}
+.menu__slide-heading {
+    font-weight: 500;
+    font-size: 24px;
+}
