@@ -9,12 +9,19 @@ body {
     a {
         color: var(--main-font-color);
     }
+    &--header-other {
+        background-color: transparent;
+    }
 }
 
 .container {
     max-width: 1210px;
     padding: 0 15px;
     margin: 0 auto;
+
+    &--page-container {
+        padding: 90px 0;
+    }
 }
 
 .section-heading {
@@ -31,4 +38,11 @@ body {
 
 .hidden {
     display: none;
+}
+
+.heading-description {
+    padding-top: 16px;
+    padding-bottom: 48px;
+
+    max-width: 500px;
 }

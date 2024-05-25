@@ -1,0 +1,20 @@
+.contacts__grid {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    gap: 50px; 
+
+    padding-top: 30px;
+}
+.contacts__info-list {
+    display: grid;
+    gap: 40px;
+}
+.contacts__info-list__item {
+    display: grid;
+    gap: 8px;
+    
+    h4 {
+        font-weight: 700;
+        font-size: 20px;  
+    }
+}
