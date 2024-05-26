@@ -1,0 +1,40 @@
+.benefits {
+    padding-top: 120px;
+    padding-bottom: 40px;
+}
+.benefits__row {
+    display: flex;
+    gap: 24px;
+}
+
+.benefits__row2 {
+    justify-content: flex-end;
+}
+.benefits__row-item {
+    background-color: var(--review-background);
+    border-radius: 10px;
+    width: 277px;
+    height: 277px;
+
+    padding: 20px;
+
+
+
+    img {
+        margin-bottom: 16px;
+    }
+}
+.benefits__row1 {
+    margin-bottom: 24px;
+    justify-content: flex-start;
+}
+.benefits__row-heading {
+    font-weight: 700;
+    font-size: 20px;
+    text-transform: uppercase;
+
+    margin-bottom: 16px;
+}
+.benefits__row1-item:nth-child(3) {
+    background-color: var(--pink-background);
+}

@@ -1,0 +1,47 @@
+.calculate-price {
+    // padding-bottom: 100px;
+}
+
+.calculate-price__inputs {
+    display: flex;
+    justify-content: space-between;
+
+    margin-bottom: 24px;
+
+    select, input {
+        border-bottom: 1px solid var(--calculator-border-color);
+
+        padding-bottom: 10px;
+        
+    }
+
+    select {
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+        padding-right: 30px;
+    }
+}
+
+.calculate-price__submit {
+    font-size: 20px;
+    font-weight: 700;
+
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 98px;
+
+    button {
+       font-weight: 500;
+       padding: 20px 24px;
+       background-color: var(--aqua-color);
+       border-radius: 10px;
+       color: var(--white-font-color);
+
+       &:hover {
+        background-color: var(--aqua-color-hover);
+        transition: 0.2s ease-in;
+       }
+    }
+}

@@ -95,7 +95,10 @@ legend {
   --review-background: #F7F6F5;
   --yellow-color: #F6DA18;
   --aqua-color: #48BFCD;
+  --aqua-color-hover: #3ca9b6;
   --header-page-color: #C5C5C5;
+  --price-table-color: #e5e5e5;
+  --calculator-border-color: #e3e3e5;
 }
 
 body {
@@ -156,6 +159,10 @@ body {
 }
 .header__row a {
   color: var(--main-font-color);
+}
+.header__row a:hover {
+  color: var(--header-page-color);
+  transition: 0.2s ease-in;
 }
 
 .header__logo {
@@ -288,6 +295,10 @@ body {
 .footer a {
   color: var(--white-color);
 }
+.footer a:hover {
+  color: var(--transparent-font-color);
+  transition: 0.2s ease-in;
+}
 
 .footer__wrapper {
   padding-top: 40px;
@@ -357,6 +368,10 @@ body {
 }
 .footer a {
   color: var(--white-color);
+}
+.footer a:hover {
+  color: var(--transparent-font-color);
+  transition: 0.2s ease-in;
 }
 
 .footer__wrapper {
@@ -692,4 +707,169 @@ body {
   justify-content: space-between;
   padding-top: 30px;
   padding-bottom: 48px;
+  align-items: center;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+  color: #fff;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 0;
+}
+
+.mySwiper .swiper-slide {
+  height: 25%;
+  width: 100%;
+  opacity: 0.4;
+}
+
+.mySwiper .swiper-slide-thumb-active {
+  opacity: 1;
+}
+
+.swiper-container {
+  display: flex;
+  width: 100%;
+  height: 500px;
+}
+
+.mySwiper2 {
+  width: 80%;
+  height: 100%;
+  margin-right: 20px; /* Добавлено расстояние между слайдерами */
+}
+
+.mySwiper {
+  width: 20%;
+  height: 100%;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.portfolio-slider {
+  font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  color: #000;
+  margin: 0;
+  padding: 0;
+}
+
+.price {
+  margin-bottom: 50px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 88px;
+}
+
+th {
+  padding-bottom: 16px;
+}
+
+td {
+  border: 1px solid var(--price-table-color);
+  padding: 16px;
+  text-align: center;
+}
+
+td:first-child {
+  border-left: none;
+}
+
+td:last-child {
+  border-right: none;
+}
+
+.calculate-price__inputs {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 24px;
+}
+.calculate-price__inputs select, .calculate-price__inputs input {
+  border-bottom: 1px solid var(--calculator-border-color);
+  padding-bottom: 10px;
+}
+.calculate-price__inputs select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  padding-right: 30px;
+}
+
+.calculate-price__submit {
+  font-size: 20px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 98px;
+}
+.calculate-price__submit button {
+  font-weight: 500;
+  padding: 20px 24px;
+  background-color: var(--aqua-color);
+  border-radius: 10px;
+  color: var(--white-font-color);
+}
+.calculate-price__submit button:hover {
+  background-color: var(--aqua-color-hover);
+  transition: 0.2s ease-in;
+}
+
+.benefits {
+  padding-top: 120px;
+  padding-bottom: 40px;
+}
+
+.benefits__row {
+  display: flex;
+  gap: 24px;
+}
+
+.benefits__row2 {
+  justify-content: flex-end;
+}
+
+.benefits__row-item {
+  background-color: var(--review-background);
+  border-radius: 10px;
+  width: 277px;
+  height: 277px;
+  padding: 20px;
+}
+.benefits__row-item img {
+  margin-bottom: 16px;
+}
+
+.benefits__row1 {
+  margin-bottom: 24px;
+  justify-content: flex-start;
+}
+
+.benefits__row-heading {
+  font-weight: 700;
+  font-size: 20px;
+  text-transform: uppercase;
+  margin-bottom: 16px;
+}
+
+.benefits__row1-item:nth-child(3) {
+  background-color: var(--pink-background);
 }/*# sourceMappingURL=main.css.map */

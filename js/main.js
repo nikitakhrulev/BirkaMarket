@@ -1,4 +1,4 @@
-const swiper = new Swiper('.swiper', {
+const swiperHero = new Swiper('.swiper-hero', {
     // Optional parameters
     direction: 'horizontal',
     loop: true,
@@ -21,7 +21,7 @@ const swiper = new Swiper('.swiper', {
 
   //contact us
 
-  const contactUsModal = document.getElementById('contactUsModal');
+const contactUsModal = document.getElementById('contactUsModal');
 const contactShowModal = document.getElementById('contactUsBtn');
 
 contactShowModal.addEventListener('click', showModal);
@@ -117,3 +117,5 @@ const slides = document.querySelectorAll('.swiper-slide');
 const rightBtn = document.getElementById('menu__right-arrow');
 
 rightBtn.addEventListener('click', )
+
+
