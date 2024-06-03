@@ -2,6 +2,10 @@
 
 body {
     font-family: 'Roboto', sans-serif;
+
+    @media (max-width: 768px) {
+        font-size: 14px; 
+    }
 }
 
 .header {
@@ -20,7 +24,14 @@ body {
     margin: 0 auto;
 
     &--page-container {
-        padding: 90px 0;
+        padding-top: 90px;
+        padding-bottom: 90px;
+
+
+        @media (max-width: 768px) {
+            padding-top: 32px;
+            padding-bottom: 32px;
+        }
     }
 }
 
@@ -33,6 +44,10 @@ body {
 
     &--additional {
         margin-bottom: 24px;
+    }
+
+    @media (max-width: 768px) {
+        font-size: 28px;
     }
 }
 

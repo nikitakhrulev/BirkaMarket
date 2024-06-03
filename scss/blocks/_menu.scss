@@ -1,12 +1,16 @@
 .menu {
     padding: 60px 0;
+
+    @media (max-width: 768px) {
+        padding: 32px 0;
+    }
 }
 .menu__header {
     display: flex; 
     align-items: center;
     justify-content: space-between;
 
-    margin-bottom: 25px;
+    margin-bottom: 24px;
 }
 .swiper {
     position: relative;
@@ -15,7 +19,7 @@
 .swiper-slide {
 
     img {
-        margin-bottom: 12px;
+        // margin-bottom: 12px!important;
     }
     
 }
@@ -30,8 +34,19 @@
         opacity: 0.5;
         transition: 0.1s ease-in;
     }
+
+    @media (max-width: 768px) {
+        display: none;
+    }
 }
 .menu__slide-heading {
     font-weight: 500;
     font-size: 24px;
+    margin-top: 12px;
+    @media (max-width: 768px) {
+        font-size: 16px;
+    }
 }
+// .swiper-slide-menu {
+//     display:block!important;
+// }

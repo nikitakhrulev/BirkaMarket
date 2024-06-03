@@ -130,15 +130,23 @@
     z-index: 9;
 
     button {
-        background-color: #48BFCD;
-        color: white;
+        background-color: var(--aqua-color);
+        color: var(--white-font-color);
 
         border-radius: 10px;
         padding: 20px 24px;
 
         width: 216px;
         height: 63px;
-    }
+
+        &:hover {
+            background-color: var(--aqua-color-hover);
+            transition: 0.2s ease-in;
+        }
+        @media (max-width: 768px) {
+            width: 100%;
+        }
+    } 
 }
 
 
@@ -159,8 +167,9 @@
     font-size: 16px;
 
 
-    // color: #48bfcd
-    ;
+    @media (max-width: 768px) {
+        padding: 24px 0;
+    }
 }
 .contactUs__heading {
     margin-bottom: 14px;
@@ -201,6 +210,11 @@
     z-index: 9;
 
     border-radius: 10px;
+
+
+    @media (max-width: 768px) {
+        padding: 40px 12px;
+    }
 }
 .contactUs__additional-border1 {
     border-bottom: 2px solid #48bfcd;
@@ -256,7 +270,8 @@
 
 
 .form__input._error {
-    box-shadow: 0 0 15px red;
+    border-color: red;
+    // box-shadow: 0 0 15px red;
 }
 
 .form__validation {
@@ -270,4 +285,12 @@
     input {
         width: 15px;
     }
+}
+.contactUs-warning {
+    margin-top: 10px;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+
+    color: var(--warning-color);
 }

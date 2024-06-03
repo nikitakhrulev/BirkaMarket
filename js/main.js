@@ -3,20 +3,25 @@ const swiperHero = new Swiper('.swiper-hero', {
     direction: 'horizontal',
     loop: true,
     // freeMode: true,
-    slidesPerView: 2.15,
-    spaceBetween: 40,
+    spaceBetween: 16,
+    slidesPerView: 1.15,
 
     navigation: {
       nextEl: '#menu__right-arrow',
       prevEl: '#menu__left-arrow',
     },
-
-
-  });
-
-  swiper.on('click', function (swiper, event) {
-    console.log('Текущий слайд:', swiper.activeIndex + 1); // Выводит номер текущего слайда в консоль
+    breakpoints: {
+      1440: {
+        slidesPerView: 2.15,
+           spaceBetween: 40,
+ 
+      },
+  }
 });
+
+//   swiper.on('click', function (swiper, event) {
+//     console.log('Текущий слайд:', swiper.activeIndex + 1); // Выводит номер текущего слайда в консоль
+// });
 
 
   //contact us
@@ -39,83 +44,43 @@ function closeModal() {
     contactUsModal.classList.add('hidden');
 }
 
+const submitButtons = document.querySelectorAll('.submitButton');
 
-
-
-
-// form
-
-const form = document.getElementById('contact-form');
-
-form.addEventListener('submit', formSend);
-
-async function formSend(evt) {
-    evt.preventDefault();
-
-
-    let error = formValidate(form);
-
-    let formData = new FormData(form);
-
-    if (error === 0) {
-        form.classList.add('_sending');
-        let response = await fetch('sendmail.php', {
-            method: 'POST',
-            body: formData,
+        // Вешаем обработчик события на каждую кнопку
+        submitButtons.forEach(button => {
+            button.addEventListener('click', function() {
+                // Получаем идентификатор формы из data-атрибута кнопки
+                const formId = this.getAttribute('data-form-id');
+                const form = document.getElementById(formId);
+                
+                // Отправляем форму
+                form.submit();
+            });
         });
-        if (response.ok) {
-            console.log('ok')
-            form.reset();
-        } else {
-            console.log('not ok')
-        }
-    } else {
-        alert('Заполните все поля')
-    }
+
+
+
+//hero image
+
+const heroImg = document.getElementById('hero-img');
+
+if (window.innerWidth <= 768) {
+  heroImg.src = './../img/icons/mobile/hero-img-mobile.jpg';
+} else {
+  heroImg.src = './../img/hero.jpg';
 }
 
 
-function formValidate(form) {
-    let error = 0;
-    let formReq = document.querySelectorAll('._req');
+//mobile-nav
+const mobileNavBtn = document.querySelector('.mobile-menu-open');
+const mobileNav = document.querySelector('.mobile-nav')
+const mobileBtnImg = document.getElementById('mobileBtnImg');
 
-    for (let i = 0; i < formReq.length; i++) {
-        const input = formReq[i];
-        formRemoveError(input)
-
-        if (input.classList.contains('_email')) {
-            if (emailTest(input)) {
-                formAddError(input);
-                error++;
-            }
-        } else {
-            if (input.value === '') {
-                formAddError(input);
-                error++;
-            }
-        }
-    }
-}
-
-function formAddError(input) {
-    input.classList.add('_error')
-}
-
-function formRemoveError(input) {
-    input.classList.remove('_error')
-}
-function emailTest(input) {
-    return !/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/.test(input.value);
-
-}
-
-
-
-
-const slides = document.querySelectorAll('.swiper-slide');
-
-const rightBtn = document.getElementById('menu__right-arrow');
-
-rightBtn.addEventListener('click', )
-
-
+mobileNavBtn.addEventListener('click', function() {
+  mobileNav.classList.toggle('hidden');
+  if (!mobileNav.classList.contains('hidden')) {
+    mobileBtnImg.src = './../img/icons/mobile/close.svg'
+  } else {
+    mobileBtnImg.src = './../img/icons/mobile/burger.svg'
+  }
+})
