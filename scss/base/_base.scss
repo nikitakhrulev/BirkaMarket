@@ -60,4 +60,9 @@ body {
     padding-bottom: 48px;
 
     max-width: 500px;
+
+
+    @media (max-width: 768px) {
+        padding: 24px 0;
+    }
 }

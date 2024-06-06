@@ -4,37 +4,76 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Силикон</title>
+    <script src="./../js/inputmask.min.js"></script>
+    <script src="https://unpkg.com/just-validate@latest/dist/just-validate.production.min.js"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <link rel="stylesheet" href="./../scss/main.css">
 </head>
 <body>
-    <header class="header header--header-other">
-        <div class="container">
-            <div class="header__row">
-                <div class="header__logo">
-                    <a href="./../index.html"><p>birka market</p></a>
-                </div>
-                <nav class="nav">
-                    <ul class="nav__list">
-                        <li class="nav__list-item"><a href="#!" class="nav__link">О нас</a></li>
-                        <li class="nav__list-item"><a href="#!" class="nav__link">Продукция</a></li>
-                        <li class="nav__list-item"><a href="./contacts.html" class="nav__link">Контакты</a></li>
-                        <li class="nav__list-item"><a href="./delivery.html" class="nav__link">Доставка</a></li>
-                        <!-- <li class="nav__list-item"><a href="#!" class="nav__link">Рассчитать заказ</a></li> -->
-                    </ul>
-                </nav>
-                <div class="header__phone">
-                    <a href="tel:8 (495) 001-08-09">8 (495) 001-08-09</a>
-                </div>
+  <header class="header header--header-other">
+    <div class="container">
+        <div class="header__row">
+            <div class="header__logo">
+                <a href="./../index.html"><p>birka market</p></a>
             </div>
-            <div class="header__page">
-                <a href="./../index.html" class="header__page-link">Главная / <span><a href="#!">&nbspПродукция&nbsp/</a></span>&nbsp</a><p>Жаккард</p>
+            <nav class="nav">
+                <ul class="nav__list">
+                    <li class="nav__list-item"><a href="#!" class="nav__link">О нас</a></li>
+                    <li class="nav__list-item"><a href="#!" class="nav__link">Продукция</a></li>
+                    <li class="nav__list-item"><a href="./contacts.html" class="nav__link">Контакты</a></li>
+                    <li class="nav__list-item"><a href="./delivery.html" class="nav__link">Доставка</a></li>
+                    <!-- <li class="nav__list-item"><a href="#!" class="nav__link">Рассчитать заказ</a></li> -->
+                </ul>
+            </nav>
+            <div class="header__phone">
+                <a href="tel:8 (495) 001-08-09">8 (495) 001-08-09</a>
             </div>
         </div>
-    </header>
+        <div class="mobile-header__wrapper hidden">
+                <div class="mobile-header-row">
+                    <div class="header__logo">
+                      <a href="./../index.html"><p>birka market</p></a>
+                    </div>
+                    <div class="mobile-menu-open">
+                        <img src="./../img/icons/mobile/burger.svg" alt="" id='mobileBtnImg'>
+                    </div>
+                </div>
+                <div class="mobile-nav hidden">
+                    <div class="mobile-nav__wrapper">
+                        <ul class="mobile-nav__list">
+                            <li class="mobile-nav__item"><a href="#!">О нас</a></li>
+                            <li class="mobile-nav__item mobile-production">
+                            <div class="production-dropdown">
+                                <p>Продукция</p>
+                                <img src="./../img/icons/small-chevron-down.svg" alt="" class="mobile-production-arrow">
+                            </div>
+                                <div class="mobile-production__list-wrapper hidden">
+                                    <ul class="mobile-production__list">
+                                        <li class="mobile-production__item">Жаккард</li>
+                                        <li class="mobile-production__item">Силикон</li>
+                                        <li class="mobile-production__item">Сатин</li>
+                                        <li class="mobile-production__item">Картон</li>
+                                        <li class="mobile-production__item">Нейлон</li>
+                                        <li class="mobile-production__item">Хлопок</li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="mobile-nav__item"><a href="./contacts.html">Контакты</a></li>
+                            <li class="mobile-nav__item"><a href="./delivery.html">Доставка</a></li>
+                            <!-- <li class="mobile-nav__item"><a href="#!">Рассчитать заказ</a></li> -->
+                        </ul>
+                        <a href="tel:8 (999) 999-99-99" class="footer__phone">8 (999) 999-99-99</a>
+                    </div>
+                </div>
+        </div>
+        <div class="header__page">
+            <a href="#!" class="header__page-link">Главная&nbsp</a><p> / Контакты</p>
+        </div>
+    </div>
+</header>
     <main class="main">
         <div class="container container--page-container">
-            <h2 class="section-heading">Силикон</h2>
+            <h2 class="section-heading">Картон</h2>
             <p class="heading-description">В представленной галерее вы можете посмотреть фотографии
                 с нашего производства, познакомиться с разными этапами работ
                 и оценить конечный результат.</p>
@@ -174,35 +213,66 @@
               с нашего производства, познакомиться с разными этапами работ
               и оценить конечный результат.</p>
               <div class="calculate-price__wrapper">
-                <form class="calculate-price__inputs" id="form1" action="https://api.web3forms.com/submit" method="POST">
+                <form id="form1" action="https://api.web3forms.com/submit" method="POST" class="price-form">
                   <input type="hidden" name="access_key" value="4539f382-365d-4629-8024-3959c67b9137">
-                  <div class="select__wrapper">
-                    <select name="Ширина бирки / Силикон" id="">
-                      <option value="default">Ширина бирки</option>
-                    </select>
+                  <div class="calculate-price__inputs">
+                    <div class="select__wrapper">
+                      <select name="Формат бирки / Картон" id="format">
+                        <option value="default">Формат бирки</option>
+                        <option value="90*50">90*50</option>
+                        <option value="80*50">80*50</option>
+                        <option value="90*54">90*54</option>
+                        <option value="98*58">98*58</option>
+                        <option value="120*60">120*60</option>
+                        <option value="120*50">120*50</option>
+                      </select>
+                    </div>
+                    <div class="select__wrapper">
+                      <select name="Вид печати" id="print">
+                        <option value="default">Формат печати</option>
+                        <option value="4+0(односторонняя)">4+0(односторонняя)</option>
+                        <option value="4+4(двухсторонняя)">4+4(двухсторонняя)</option>
+                      </select>
+                    </div>
+                   <div class="select__wrapper">
+                      <select name="Диаметр отверстия" id="diametr">
+                        <option value="default">Диаметр отверстия</option>
+                        <option value="3мм">3мм</option>
+                        <option value="4мм">4мм</option>
+                        <option value="5мм">5мм</option>
+                      </select>
+                    </div>
+                    <!--
+                    <div class="select__wrapper">
+                      <select name="Цвет печати" id="print-color">
+                        <option value="default">Цвет печати</option>
+                        <option value="Белый">Белый</option>
+                        <option value="Черный">Черный</option>
+                        <option value="Цветной">Цветной</option>
+                      </select>
+                    </div> -->
+                    <div class="calculate-price__quantity">
+                      <input type="text" placeholder="Количество" name="quantity" id="calculate-quantity" autocomplete="off">
+                    </div>
                   </div>
-                  <div class="select__wrapper">
-                    <select name="Длина бирки" id="">
-                      <option value="default">Ширина бирки</option>
-                    </select>
+                  <div class="calucalate-price__second-layer">
+                    <div class="calculate-price__input-tel">
+                      <input type="text" placeholder="+7(___)___-__-__" class="calculate-phone" id="calculate-phone-input" name="Телефон" autocomplete="off">
+                    </div>
+                    <div class="calculate-price__input-comment">
+                      <input type="text" placeholder="Комментарий к заказу" name="Комментарий к заказу" autocomplete="off">
+                    </div>
+                    <div class="calculate-price__submit">
+                      <button type="submit" data-form-id="form1" class="submitButton">Сделать заказ</button>
+                    </div>
                   </div>
-                  <div class="select__wrapper">
-                    <select name="Цвет ленты" id="">
-                      <option value="default">Ширина бирки</option>
-                    </select>
+                  <div class="calculate-price__validation">
+                    <label>
+                      <input type="checkbox" id="validate-checkbox" class="real-checkbox">
+                      <span class="custom-checkbox"></span>
+                      Я согласен(а) с <a href="#!">политикой конфиденциальности</a> и даю <a href="#!">согласие</a> на обработку данных</label>
                   </div>
-                  <div class="select__wrapper">
-                    <select name="Цвет печати" id="">
-                      <option value="default">Ширина бирки</option>
-                      <option value="10" >Ширина бирки</option>
-                    </select>
-                  </div>
-                  <input type="text" placeholder="Количество" name="quantity">
                 </form>
-                <div class="calculate-price__submit">
-                  <p>Итого: <span>2000</span> руб.</p>
-                  <button type="submit" data-form-id="form1" class="submitButton">Сделать заказ</button>
-                </div>
               </div>
           </div>
         </section>
@@ -242,6 +312,44 @@
                 <p class="benefits__row-text">Работаем в сжатые сроки производства</p>
               </li>
             </ul>
+            <div class="benefits__mobile-wrapper hidden">
+              <div class="benefits__mobile">
+                <ul class="benefits__list-mobile1 benefits__list-mobile">
+                  <li class="benefits__list-mobile__item benefits__row-item">
+                    <img src="./../img/icons/circle-info.svg" alt="info">
+                    <h4 class="benefits__row-heading">сроки</h4>
+                    <p class="benefits__row-text">Работаем в сжатые сроки производства</p>
+                  </li>
+                  <li class="benefits__list-mobile__item benefits__row-item row-item-pink-mobile">
+                    <img src="./../img/icons/circle-info.svg" alt="info">
+                    <h4 class="benefits__row-heading">сроки</h4>
+                    <p class="benefits__row-text">Работаем в сжатые сроки производства</p>
+                  </li>
+                  <li class="benefits__list-mobile__item benefits__row-item">
+                    <img src="./../img/icons/circle-info.svg" alt="info">
+                    <h4 class="benefits__row-heading">сроки</h4>
+                    <p class="benefits__row-text">Работаем в сжатые сроки производства</p>
+                  </li>
+                </ul>
+                <ul class="benefits__list-mobile2 benefits__list-mobile">
+                  <li class="benefits__list-mobile__item benefits__row-item">
+                    <img src="./../img/icons/circle-info.svg" alt="info">
+                    <h4 class="benefits__row-heading">сроки</h4>
+                    <p class="benefits__row-text">Работаем в сжатые сроки производства</p>
+                  </li>
+                  <li class="benefits__list-mobile__item benefits__row-item">
+                    <img src="./../img/icons/circle-info.svg" alt="info">
+                    <h4 class="benefits__row-heading">сроки</h4>
+                    <p class="benefits__row-text">Работаем в сжатые сроки производства</p>
+                  </li>
+                  <li class="benefits__list-mobile__item benefits__row-item">
+                    <img src="./../img/icons/circle-info.svg" alt="info">
+                    <h4 class="benefits__row-heading">сроки</h4>
+                    <p class="benefits__row-text">Работаем в сжатые сроки производства</p>
+                  </li>
+                </ul>
+              </div>
+            </div>
           </div>
         </section> 
         <section class="contactUs">
@@ -282,7 +390,8 @@
                     <p>Напишите свои контактные данные и то, что вы хотите узнать</p>
                   </div>
                   <div class="contactUs-modal__content-form__wrapper">
-                    <form method="post" action="./sendmail.php" class="contactUs-modal__content-form" id="contact-form">
+                    <form action="https://api.web3forms.com/submit" method="POST" class="contactUs-modal__content-form" id="contact-form">
+                      <input type="hidden" name="access_key" value="4539f382-365d-4629-8024-3959c67b9137">
                       <input type="text" placeholder="Имя" class="form__input _req" id="name" name="name">
                       <input type="email" placeholder="Email" class="form__input _req _email" id="email" name="email">
                       <input type="text" placeholder="Телефон" class="form__input _req" id="phone" name="phone">
@@ -306,40 +415,73 @@
         </section>   
         </main>
         <footer class="footer">
-          <div class="container">
-              <div class="footer__wrapper">
-                  <div class="footer__bio">
-                      <div class="footer__logo">
-                          <a href="./index.html">BIRKA<br> MARKET</a>
+          <div class="desktop-footer">
+              <div class="container">
+                  <div class="footer__wrapper">
+                      <div class="footer__bio">
+                          <div class="footer__logo">
+                              <a href="./index.html">BIRKA<br> MARKET</a>
+                          </div>
+                          <div class="footer__desc">
+                              <p>Изготовление бирок на заказ</p>
+                          </div>
+                          <div class="footer__req">
+                              <p>ИП Федотов А.В.</p>
+                              <p>ИНН 771412910075</p>
+                              <p>ОГРНИП 323774600620762</p>
+                          </div>
                       </div>
-                      <div class="footer__desc">
-                          <p>Изготовление бирок на заказ</p>
+                      <div class="footer__production">
+                          <h4 class="footer__list-heading">Продукция</h4>
+                          <ul class="footer__production-list footer__list">
+                              
+                              <li class="footer__production-list__item"><a href="#!" class="footer__production-link">Сатин</a></li>
+                              <li class="footer__production-list__item"><a href="#!" class="footer__production-link">Хлопок</a></li>
+                              <li class="footer__production-list__item"><a href="./karton.html" class="footer__production-link">Картон</a></li>
+                              <li class="footer__production-list__item"><a href="./silicon.html" class="footer__production-link">Силикон</a></li>
+                              <li class="footer__production-list__item"><a href="#!" class="footer__production-link">Нейлон</a></li>
+                              <li class="footer__production-list__item"><a href="./zhakkard.html" class="footer__production-link">Жаккард</a></li>
+                          </ul>
                       </div>
-                      <div class="footer__req">
-                          <p>ИП Федотов А.В.</p>
-                          <p>ИНН 771412910075</p>
-                          <p>ОГРНИП 323774600620762</p>
+                      <div class="footer__nav">
+                          <h4 class="footer__list-heading">Навигация</h4>
+                          <ul class="footer__nav-list footer__list">
+                             
+                              <li class="footer__nav-list__item"><a href="#!" class="footer__nav-link">О нас</a></li>
+                              <li class="footer__nav-list__item"><a href="./delivery.html" class="footer__nav-link">Доставка</a></li>
+                              <li class="footer__nav-list__item"><a href="./contacts.html" class="footer__nav-link">Контакты</a></li>
+                          </ul>
+                      </div>
+                      <div class="footer__contacts">
+                          <h4 class="footer__list-heading">Контакты</h4>
+                          <ul class="footer__contacts-list footer__list">
+                              <li class="footer__production-list__item footer__address">
+                                  <p>125363, г. Москва</p>
+                                  <p>Строительный проезд,</p>
+                                  <p>д. 2, стр. 1</p>
+                              </li>
+                              <li class="footer__production-list__item"><p>пн-пт 10:00 – 20:00</p></li>
+                              <li class="footer__production-list__item footer__mail-phone">
+                                  <a href="tel:8 (999) 999-99-99" class="footer__phone">8 (999) 999-99-99</a>
+                                  <a href="mailto:123@gmail.com">123@gmail.com</a>
+                              </li>
+                          </ul>
                       </div>
                   </div>
-                  <div class="footer__production">
-                      <h4 class="footer__list-heading">Продукция</h4>
-                      <ul class="footer__production-list footer__list">
-                          
-                          <li class="footer__production-list__item"><a href="#!" class="footer__production-link">Сатин</a></li>
-                          <li class="footer__production-list__item"><a href="#!" class="footer__production-link">Хлопок</a></li>
-                          <li class="footer__production-list__item"><a href="#!" class="footer__production-link">Картон</a></li>
-                          <li class="footer__production-list__item"><a href="./pages/silicon.html" class="footer__production-link">Силикон</a></li>
-                          <li class="footer__production-list__item"><a href="#!" class="footer__production-link">Нейлон</a></li>
-                          <li class="footer__production-list__item"><a href="#!" class="footer__production-link">Жаккард</a></li>
-                      </ul>
+              </div>
+          </div>
+          <div class="mobile-footer hidden">
+              <div class="container">
+                  <div class="footer__logo">
+                      <a href="./index.html">BIRKA<br> MARKET</a>
                   </div>
-                  <div class="footer__nav">
-                      <h4 class="footer__list-heading">Навигация</h4>
-                      <ul class="footer__nav-list footer__list">
-                         
-                          <li class="footer__nav-list__item"><a href="#!" class="footer__nav-link">О нас</a></li>
-                          <li class="footer__nav-list__item"><a href="#!" class="footer__nav-link">Доставка</a></li>
-                      </ul>
+                  <div class="footer__desc">
+                      <p>Изготовление бирок на заказ</p>
+                  </div>
+                  <div class="footer__req">
+                      <p>ИП Федотов А.В.</p>
+                      <p>ИНН 771412910075</p>
+                      <p>ОГРНИП 323774600620762</p>
                   </div>
                   <div class="footer__contacts">
                       <h4 class="footer__list-heading">Контакты</h4>
@@ -356,6 +498,30 @@
                           </li>
                       </ul>
                   </div>
+                  <div class="mobile-footer__lists">
+                      <div class="footer__production">
+                          <h4 class="footer__list-heading">Продукция</h4>
+                          <ul class="footer__production-list footer__list">
+                              
+                              <li class="footer__production-list__item"><a href="#!" class="footer__production-link">Сатин</a></li>
+                              <li class="footer__production-list__item"><a href="#!" class="footer__production-link">Хлопок</a></li>
+                              <li class="footer__production-list__item"><a href="./pages/karton.html" class="footer__production-link">Картон</a></li>
+                              <li class="footer__production-list__item"><a href="./pages/silicon.html" class="footer__production-link">Силикон</a></li>
+                              <li class="footer__production-list__item"><a href="#!" class="footer__production-link">Нейлон</a></li>
+                              <li class="footer__production-list__item"><a href="./pages/zhakkard.html" class="footer__production-link">Жаккард</a></li>
+                          </ul>
+                      </div>
+                      <div class="footer__nav">
+                          <h4 class="footer__list-heading">Навигация</h4>
+                          <ul class="footer__nav-list footer__list">
+                             
+                              <li class="footer__nav-list__item"><a href="#!" class="footer__nav-link">О нас</a></li>
+                              <li class="footer__nav-list__item"><a href="./delivery.html" class="footer__nav-link">Доставка</a></li>
+                              <li class="footer__nav-list__item"><a href="./contacts.html" class="footer__nav-link">Контакты</a></li>
+                          </ul>
+                      </div>
+                  </div>
+                 
               </div>
           </div>
           <div class="additional-footer">
@@ -368,7 +534,9 @@
           </div>
       </footer>
         <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+        <script src="./../js/mobile-menu.js"></script>
         <script src="./../js/swiper.js"></script>
+        <script src="./../js/validation.js"></script>
         <script src="./../js/main.js"></script>
 </body>
 </html>

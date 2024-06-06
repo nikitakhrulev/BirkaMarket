@@ -42,7 +42,22 @@
                         <div class="mobile-nav__wrapper">
                             <ul class="mobile-nav__list">
                                 <li class="mobile-nav__item"><a href="#!">О нас</a></li>
-                                <li class="mobile-nav__item"><a href="#!">Продукция</a></li>
+                                <li class="mobile-nav__item mobile-production">
+                                <div class="production-dropdown">
+                                    <p>Продукция</p>
+                                    <img src="./img/icons/small-chevron-down.svg" alt="" class="mobile-production-arrow">
+                                </div>
+                                    <div class="mobile-production__list-wrapper hidden">
+                                        <ul class="mobile-production__list">
+                                            <li class="mobile-production__item"><a href="./pages/zhakkard.html">Жаккард</a></li>
+                                            <li class="mobile-production__item"><a href="./pages/silicon.html">Силикон</a></li>
+                                            <li class="mobile-production__item">Сатин</li>
+                                            <li class="mobile-production__item"><a href="./pages/karton.html">Картон</a></li>
+                                            <li class="mobile-production__item">Нейлон</li>
+                                            <li class="mobile-production__item">Хлопок</li>
+                                        </ul>
+                                    </div>
+                                </li>
                                 <li class="mobile-nav__item"><a href="#!">Контакты</a></li>
                                 <li class="mobile-nav__item"><a href="#!">Доставка</a></li>
                                 <li class="mobile-nav__item"><a href="#!">Рассчитать заказ</a></li>
@@ -213,6 +228,12 @@
                             <input type="checkbox" name="validate" id="validation">
                             <label for="validation">Отправляя форму, вы даете согласие на обработку персональных данных</label>
                         </div> -->
+                        <div class="feedback__validation">
+                            <label>
+                              <input type="checkbox" id="validate-checkbox" class="real-checkbox">
+                              <span class="custom-checkbox"></span>
+                              Я согласен(а) с <a href="#!">политикой конфиденциальности</a> и даю <a href="#!">согласие</a> на обработку данных</label>
+                          </div>
                         <div class="contactUs-submit__btn">
                           <button type="submit">Связаться с нами</button>
                           <!-- <input type="submit" value="Send data" class="btn" name="send"> -->
@@ -348,6 +369,8 @@
         </div>
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="./js/swiper.js"></script>
+    <script src="./js/mobile-menu.js"></script>
     <script src="./js/main.js"></script>
 </body>
 </html>

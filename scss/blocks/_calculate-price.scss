@@ -131,6 +131,16 @@
         width: 100%;
     }
 }
+.calculate-price__input-tel__zhakkard {
+
+    input {
+        width: 100%;
+    }
+
+    @media (max-width: 768px) {
+        width: 100%;
+    }
+}
 .calculate-price__input-comment {
     width: 40%;
 

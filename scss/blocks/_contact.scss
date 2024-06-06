@@ -26,6 +26,10 @@
     animation: slideIn 0.9s ease-in forwards; /* Анимация для выезжания */
 
     border-radius: 10px;
+
+    @media (max-width: 768px) {
+        padding: 0;
+    }
 }
 @keyframes slideIn {
     from {
@@ -60,6 +64,11 @@
     padding: 20px 35px;
 
     gap: 30px;
+
+
+    @media (max-width: 768px) {
+        flex-direction: column;
+    }
   }
 
   .contactUs-modal__content-desc {
@@ -87,6 +96,10 @@
   .contactUs-heading {
     margin-bottom: 20px;
     max-width: 220px;
+
+    @media (max-width: 768px) {
+        width: 250px;
+    }
 }
 .contactUs-submit__btn {
     text-align: start;
@@ -94,8 +107,26 @@
     margin-top: auto;
 
     button {
-        border: 2px solid grey;
-        padding: 10px 20px;
+        background-color: var(--aqua-color);
+        color: var(--white-font-color);
+
+        border-radius: 10px;
+        padding: 20px 24px;
+
+        width: 216px;
+        height: 63px;
+        &:hover {
+            background-color: var(--aqua-color-hover);
+            transition: 0.2s ease-in;
+        }
+    }
+
+    @media (max-width: 768px) {
+        width: 100%;
+
+        button {
+            width: 100%;
+        }
     }
     
 }
@@ -293,4 +324,8 @@
     align-items: center;
 
     color: var(--warning-color);
+}
+
+.feedback__validation {
+    text-align: left;
 }

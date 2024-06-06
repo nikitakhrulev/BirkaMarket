@@ -100,6 +100,42 @@
 
     padding: 12px;
   }
+  @media (max-width: 768px) {
+    .swiper-container {
+      flex-direction: column;
+      gap: 16px;
+      height: 366px!important;
+
+    }
+  
+    .mySwiper2 {
+      width: 100%;
+      height: auto;
+      margin-right: 0;
+    }
+  
+    .mySwiper {
+      width: 100%;
+      height: auto;
+      display: flex;
+      flex-direction: row;
+      overflow-x: auto;
+    }
+  
+    .mySwiper .swiper-slide {
+      height: auto;
+      width: auto;
+      flex: 0 0 auto;
+      margin-right: 10px; /* Добавим небольшой отступ между миниатюрами */
+    }
+  
+    #slider__left-arrow,
+    #slider__right-arrow {
+      display: none;
+    }
+  }
+
+  
 /* Стили для первого слайдера */
 .swiper-hero-container .swiper-slide img {
   display: block;
