@@ -18,8 +18,20 @@
             </div>
             <nav class="nav">
                 <ul class="nav__list">
-                    <li class="nav__list-item"><a href="#!" class="nav__link">О нас</a></li>
-                    <li class="nav__list-item"><a href="#!" class="nav__link">Продукция</a></li>
+                    <!-- <li class="nav__list-item"><a href="#!" class="nav__link">О нас</a></li> -->
+                    <li class="nav__list-item dropdown-item"><a href="#!" class="nav__link">Продукция <span class="production-arrow"><img src="./../img/icons/small-chevron-down.svg" alt="" class="production-arrow__img"></span></a>
+                        <div class="sub-nav hidden">
+                            <ul class="sub-nav__list">
+                                <li class="sub-nav__item"><a href="./zhakkard.html" class="sub-nav__link">Жаккард</a></li>
+                                <li class="sub-nav__item"><a href="./silicon.html" class="sub-nav__link">Силикон</a></li>
+                                <li class="sub-nav__item"><a href="./neylon.html" class="sub-nav__link">Нейлон</a></li>
+                                <li class="sub-nav__item"><a href="./satin.html" class="sub-nav__link">Сатин</a></li>
+                                <li class="sub-nav__item"><a href="./karton.html" class="sub-nav__link">Картон</a></li>
+                                <li class="sub-nav__item"><a href="./cotton.html" class="sub-nav__link">Хлопок</a></li>
+                            </ul>
+                        </div>
+                    
+                    </li>
                     <li class="nav__list-item"><a href="./contacts.html" class="nav__link">Контакты</a></li>
                     <li class="nav__list-item"><a href="./delivery.html" class="nav__link">Доставка</a></li>
                     <!-- <li class="nav__list-item"><a href="#!" class="nav__link">Рассчитать заказ</a></li> -->
@@ -67,7 +79,7 @@
                 </div>
         </div>
         <div class="header__page">
-            <a href="#!" class="header__page-link">Главная&nbsp</a><p> / Контакты</p>
+          <a href="./../index.html" class="header__page-link">Главная&nbsp</a><a class="header__page-link" href="./menu.html"> / Продукция</a><p>&nbsp/ Жаккард</p>
         </div>
     </div>
 </header>
@@ -506,5 +518,6 @@
         <script src="./../js/validation.js"></script>
         <script src="./../js/swiper.js"></script>
         <script src="./../js/main.js"></script>
+        <script src="./../js/feedback.js"></script>
 </body>
 </html>

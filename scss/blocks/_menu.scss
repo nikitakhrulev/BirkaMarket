@@ -42,7 +42,7 @@
 .menu__slide-heading {
     font-weight: 500;
     font-size: 24px;
-    margin-top: 12px;
+    padding: 12px 0;
     @media (max-width: 768px) {
         font-size: 16px;
     }
@@ -50,3 +50,38 @@
 // .swiper-slide-menu {
 //     display:block!important;
 // }
+
+.menu__button {
+    text-align: center;
+    a {
+        color: var(--main-font-color)
+    }
+    button {
+        background-color: var(--review-background);
+        padding: 20px 24px;
+        font-weight: 700;
+        font-size: 20px;
+        border-radius: 10px;
+
+        &:hover {
+            opacity: 0.5;
+            transition: 0.2s ease-in;
+        }
+        
+    }
+}
+
+.hero-slider-item {
+    color: var(--main-font-color);
+    h4 {
+        text-align: start;
+
+    }
+
+    &:hover {
+        img {
+            opacity: 0.7;
+            transition: 0.2s ease-in;
+        }
+    }
+}

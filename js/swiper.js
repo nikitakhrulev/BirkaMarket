@@ -1,7 +1,7 @@
 const swiperHero = new Swiper('.swiper-hero', {
   // Optional parameters
   direction: 'horizontal',
-  loop: true,
+  loop: false,
   // freeMode: true,
   spaceBetween: 16,
   slidesPerView: 1.15,

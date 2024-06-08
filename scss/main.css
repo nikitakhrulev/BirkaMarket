@@ -174,6 +174,10 @@ body {
 .header__page a {
   color: var(--header-page-color);
 }
+.header__page a:hover {
+  color: var(--main-font-color);
+  transition: 0.2s ease-in;
+}
 
 .header__row {
   display: flex;
@@ -339,12 +343,41 @@ body {
 .menu__slide-heading {
   font-weight: 500;
   font-size: 24px;
-  margin-top: 12px;
+  padding: 12px 0;
 }
 @media (max-width: 768px) {
   .menu__slide-heading {
     font-size: 16px;
   }
+}
+
+.menu__button {
+  text-align: center;
+}
+.menu__button a {
+  color: var(--main-font-color);
+}
+.menu__button button {
+  background-color: var(--review-background);
+  padding: 20px 24px;
+  font-weight: 700;
+  font-size: 20px;
+  border-radius: 10px;
+}
+.menu__button button:hover {
+  opacity: 0.5;
+  transition: 0.2s ease-in;
+}
+
+.hero-slider-item {
+  color: var(--main-font-color);
+}
+.hero-slider-item h4 {
+  text-align: start;
+}
+.hero-slider-item:hover img {
+  opacity: 0.7;
+  transition: 0.2s ease-in;
 }
 
 .reviews {
@@ -1167,6 +1200,7 @@ body {
 
 .swiper-hero-container {
   overflow: hidden;
+  margin-bottom: 24px;
 }
 
 .swiper-hero-container .swiper-slide {
@@ -1518,4 +1552,62 @@ td:last-child {
 .real-checkbox:checked + .custom-checkbox {
   background-color: var(--aqua-color);
   border: none;
+}
+
+.catalog-page {
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+.catalog__menu-columns {
+  display: flex;
+  gap: 80px;
+}
+
+.catalog__column {
+  display: grid;
+  gap: 48px;
+}
+
+.catalog__column-item a {
+  color: var(--main-font-color);
+}
+.catalog__column-item a:hover img {
+  opacity: 0.7;
+  transition: 0.2s ease-in;
+}
+
+.nav-list__item {
+  padding-bottom: 10px;
+}
+
+.dropdown-item {
+  position: relative;
+}
+.dropdown-item:hover .sub-nav {
+  display: block;
+}
+.dropdown-item:hover .production-arrow {
+  opacity: 0.4;
+  transition: 0.2s ease-in;
+}
+.dropdown-item img {
+  transform: translate(0%, 10%);
+}
+
+.sub-nav {
+  margin-top: 10px;
+  position: absolute;
+  background-color: var(--review-background);
+  border-radius: 10px;
+}
+
+.sub-nav__list {
+  padding: 20px 24px;
+  display: grid;
+  gap: 10px;
+}
+
+.nav__link {
+  padding-bottom: 10px;
 }/*# sourceMappingURL=main.css.map */

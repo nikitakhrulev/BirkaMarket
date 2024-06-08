@@ -15,9 +15,21 @@
                 </div>
                 <nav class="nav">
                     <ul class="nav__list">
-                        <li class="nav__list-item"><a href="#!" class="nav__link">О нас</a></li>
-                        <li class="nav__list-item"><a href="#!" class="nav__link">Продукция</a></li>
-                        <li class="nav__list-item"><a href="#!" class="nav__link">Контакты</a></li>
+                        <!-- <li class="nav__list-item"><a href="#!" class="nav__link">О нас</a></li> -->
+                        <li class="nav__list-item dropdown-item"><a href="#!" class="nav__link">Продукция <span class="production-arrow"><img src="./../img/icons/small-chevron-down.svg" alt="" class="production-arrow__img"></span></a>
+                            <div class="sub-nav hidden">
+                                <ul class="sub-nav__list">
+                                    <li class="sub-nav__item"><a href="./zhakkard.html" class="sub-nav__link">Жаккард</a></li>
+                                    <li class="sub-nav__item"><a href="./silicon.html" class="sub-nav__link">Силикон</a></li>
+                                    <li class="sub-nav__item"><a href="./neylon.html" class="sub-nav__link">Нейлон</a></li>
+                                    <li class="sub-nav__item"><a href="./satin.html" class="sub-nav__link">Сатин</a></li>
+                                    <li class="sub-nav__item"><a href="./karton.html" class="sub-nav__link">Картон</a></li>
+                                    <li class="sub-nav__item"><a href="./cotton.html" class="sub-nav__link">Хлопок</a></li>
+                                </ul>
+                            </div>
+                        
+                        </li>
+                        <li class="nav__list-item"><a href="./contacts.html" class="nav__link">Контакты</a></li>
                         <li class="nav__list-item"><a href="./delivery.html" class="nav__link">Доставка</a></li>
                         <!-- <li class="nav__list-item"><a href="#!" class="nav__link">Рассчитать заказ</a></li> -->
                     </ul>
@@ -29,7 +41,7 @@
             <div class="mobile-header__wrapper hidden">
                     <div class="mobile-header-row">
                         <div class="header__logo">
-                            <p>birka market</p>
+                          <a href="./../index.html"><p>birka market</p></a>
                         </div>
                         <div class="mobile-menu-open">
                             <img src="./../img/icons/mobile/burger.svg" alt="" id='mobileBtnImg'>
@@ -55,9 +67,9 @@
                                         </ul>
                                     </div>
                                 </li>
-                                <li class="mobile-nav__item"><a href="#!">Контакты</a></li>
-                                <li class="mobile-nav__item"><a href="#!">Доставка</a></li>
-                                <li class="mobile-nav__item"><a href="#!">Рассчитать заказ</a></li>
+                                <li class="mobile-nav__item"><a href="./contacts.html">Контакты</a></li>
+                                <li class="mobile-nav__item"><a href="./delivery.html">Доставка</a></li>
+                                <!-- <li class="mobile-nav__item"><a href="#!">Рассчитать заказ</a></li> -->
                             </ul>
                             <a href="tel:8 (999) 999-99-99" class="footer__phone">8 (999) 999-99-99</a>
                         </div>
@@ -88,9 +100,9 @@
                             </li>
                             <li class="contacts__info-list__item">
                                 <h4>Адрес офиса</h4>
-                                <p>125363, г. Москва, 
+                                <p>125363, г. Москва,<br> 
                                     Строительный проезд, д. 2, стр. 1</p>
-                                <p>123@gmail.com</p>
+                                <p>пн-пт 08:00 - 20:00</p>
                             </li>
                             <li class="contacts__info-list__item">
                                 <h4>Как к нам добраться?</h4>
