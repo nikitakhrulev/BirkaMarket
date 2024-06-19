@@ -1022,7 +1022,7 @@ body {
   display: grid;
   gap: 8px;
 }
-.contacts__info-list__item h4 {
+.contacts__info-list__item h2 {
   font-weight: 700;
   font-size: 20px;
 }
@@ -1057,7 +1057,7 @@ body {
   max-width: 377px;
 }
 
-.delivery__options-info h4 {
+.delivery__options-info .delivery__options-heading {
   font-weight: 700;
   font-size: 20px;
 }
@@ -1164,7 +1164,7 @@ body {
   .swiper-container {
     flex-direction: column;
     gap: 16px;
-    height: 366px !important;
+    height: auto;
   }
   .mySwiper2 {
     width: 100%;
@@ -1214,7 +1214,7 @@ body {
 /* Стили для второго слайдера */
 @media (max-width: 768px) {
   .price-table {
-    padding: 32px 0;
+    padding-bottom: 32px;
   }
 }
 
@@ -1395,7 +1395,6 @@ td:last-child {
 }
 
 .calculate-price__validation {
-  display: flex;
   gap: 8px;
 }
 
@@ -1555,24 +1554,42 @@ td:last-child {
 }
 
 .catalog-page {
-  padding-top: 60px;
-  padding-bottom: 60px;
+  padding: 60px 0;
+}
+@media (max-width: 768px) {
+  .catalog-page {
+    padding: 32px 0;
+  }
 }
 
 .catalog__menu-columns {
   display: flex;
   gap: 80px;
 }
+@media (max-width: 768px) {
+  .catalog__menu-columns {
+    gap: 8px;
+  }
+}
 
 .catalog__column {
   display: grid;
   gap: 48px;
 }
+@media (max-width: 768px) {
+  .catalog__column {
+    gap: 24px;
+  }
+}
 
 .catalog__column-item a {
   color: var(--main-font-color);
 }
-.catalog__column-item a:hover img {
+.catalog__column-item a img {
+  max-width: 100%;
+  border-radius: 12px;
+}
+.catalog__column-item a img:hover {
   opacity: 0.7;
   transition: 0.2s ease-in;
 }

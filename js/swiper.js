@@ -1,8 +1,6 @@
 const swiperHero = new Swiper('.swiper-hero', {
-  // Optional parameters
   direction: 'horizontal',
-  loop: false,
-  // freeMode: true,
+  loop: true,
   spaceBetween: 16,
   slidesPerView: 1.15,
 
@@ -18,9 +16,7 @@ const swiperHero = new Swiper('.swiper-hero', {
     },
 }
 });
-
 var direction = window.innerWidth <= 768 ? 'horizontal' : 'vertical';
-
     var swiper = new Swiper(".mySwiper", {
       spaceBetween: 10,
       slidesPerView: 4,
@@ -28,7 +24,6 @@ var direction = window.innerWidth <= 768 ? 'horizontal' : 'vertical';
       freeMode: true,
       watchSlidesProgress: true,
     });
-
     var swiper2 = new Swiper(".mySwiper2", {
       spaceBetween: 10,
       navigation: {

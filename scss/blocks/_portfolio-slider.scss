@@ -104,8 +104,8 @@
     .swiper-container {
       flex-direction: column;
       gap: 16px;
-      height: 366px!important;
-
+      // height: 366px!important;
+      height: auto;
     }
   
     .mySwiper2 {

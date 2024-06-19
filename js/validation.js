@@ -1,5 +1,4 @@
 const formS = document.getElementById('form1');
-
 let validation = new JustValidate(formS);
 let selector = document.querySelector('#calculate-phone-input');
 let im = new Inputmask("+7(999)999-99-99");
